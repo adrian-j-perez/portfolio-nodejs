@@ -1,33 +1,63 @@
-var http = require('http');
-var url = require('url');
-var dt = require('./datetime');
+/* 
+Name: Adrian Perez
+Descr: using node, express with handlebars, this is going to be hosted in azure 
+
+*/
+
+/**
+ * thknk of the the express frame work as a light waieght  middle-ware
+ * from the fornt end (html.css, JS) adn the back end (node.js); it just so happen that this 
+ * middle-ware  is JS to contral what is  going on.
+ * 
+ * https://www.youtube.com/watch?v=JlgKybraoy4
+ * 
+ * https://expressjs.com/en/starter/installing.html
+ * 
+ * https://youtu.be/mW2NyglYpm8 
+ * 
+ */
+
+const express = require('express')
+const expressHandlebars = require('express-handlebars')
+const app = express()
+
+//static files or try app.use(express.static(__dirname + '/public'))
+app.use(express.static('public'))
+
+app.engine('handlebars', expressHandlebars({
+    defaultLayout: 'main',
+}))
+
+app.set('view engine', 'handlebars')
+app.set("views", './views')
+
+const port = process.env.PORT || 3000;
 
 
-const server = http.createServer((request, response) => {
-    // Write the request to the log. 
-    console.log(request);
+// webpage routes//
 
-    // Standard Hello World.
-    response.writeHead(200, {'Content-Type': 'text/html'});
-    response.write('<h3>Hello World!</h3>')
+app.get('/', (req, res) => res.render('homepage'))
 
-    // Access funcion from a separate JavaScript module.
-    response.write("The date and time are currently: " + dt.myDateTime() + "<br><br>");
+/*
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/views/index.html')
+})
+*/
 
-    // Show the url. 
-    response.write("req.url="+request.url+"<br><br>");
 
-    // Suggest adding something tl the url so that we can parse it. 
-    response.write("Consider adding '/test?year=2017&month=July' to the URL.<br><br>");
-    var q = url.parse(request.url, true).query;
-    var txt = q.year + " " + q.month;
-    response.write("txt="+txt);
 
-    // Close the response
-    response.end('<h3>The End.</h3>');
-});
+app.use((req, res) => {
+    res.status(404)
+    res.render('404')
+})
 
-const port = process.env.PORT || 1337;
-server.listen(port);
+app.use((req, res) => {
+    res.status(500)
+    res.render('500')
+})
 
-console.log("Server running at http://localhost:%d", port);
+
+//the port
+app.listen(port, () => console.log(
+    `Express started on http://localhost:${port}; ` +
+    `press Ctrl-C to terminate.`))

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!--
+    Name: Adrian Perez
+    Class: software eng.
+    deatil: When the button is pushed, the first input field should be verified against the second field (which should hold the regular 
+    expression) and the output field should be updated to reflect whether the validation was true or false.
+    Link to example: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
+
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RegExp</title>
+
+    <script>
+
+        //has to be T/F
+        function testExpersion() {
+
+            inputOne = document.getElementById("input1").value; //getting data
+            inputTwo = document.getElementById("input2").value;
+
+            regex = new RegExp(inputTwo); // setting it to object
+
+
+            answser = regex.test(inputOne); // testing
+
+            //Adding some cond. for t/f
+            if (answser) {
+                answser += " - found something"
+                document.getElementById("output").style.backgroundColor = "green";
+            }
+            else {
+                answser += " - did not find anything"
+                document.getElementById("output").style.backgroundColor = "red";
+            }
+
+            document.getElementById("output").innerHTML = answser;
+
+        }
+
+    </script>
+
+    <style>
+        h2 {
+            text-decoration-line: underline;
+            margin-bottom: unset;
+        }
+
+        h4 {
+            margin-top: unset;
+        }
+
+        body {
+            text-align: center;
+            background-color: beige;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 50px;
+        }
+
+        input {
+            margin: 10px;
+            width: 200px;
+            height: 50px;
+            font-size: 18px;
+        }
+
+        button {
+            width: 150px;
+            height: 50px;
+            margin: 20px;
+        }
+
+        p {
+            margin-bottom: unset;
+
+        }
+
+        p.output {
+            border: black;
+            border: solid;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: larger;
+            text-transform: uppercase;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2>Testing Regular Expression</h2>
+    <h4>with JavaScript</h4>
+
+    <p>Enter a string:</p>
+    <input id="input1" type="text" value="" size="5" autofocus>
+
+
+    <p>Enter what to find:</p>
+    <input id="input2" type="text" value="" size="5" >
+
+    <br>
+    <button type="button" onclick="testExpersion()" >Test Expression</button>
+
+    <!-- The output can only be T/F-->
+    <p class="output" id="output">T/F</p>
+
+</body>
+
+</html>
