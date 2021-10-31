@@ -4,18 +4,6 @@ Descr: using node, express with handlebars, this is going to be hosted in azure
 
 */
 
-/**
- * thknk of the the express frame work as a light waieght  middle-ware
- * from the fornt end (html.css, JS) adn the back end (node.js); it just so happen that this 
- * middle-ware  is JS to contral what is  going on.
- * 
- * https://www.youtube.com/watch?v=JlgKybraoy4
- * 
- * https://expressjs.com/en/starter/installing.html
- * 
- * https://youtu.be/mW2NyglYpm8 
- * 
- */
 
 const express = require('express')
 const expressHandlebars = require('express-handlebars')
@@ -36,7 +24,12 @@ const port = process.env.PORT || 3000;
 
 // webpage routes//
 
-app.get('/', (req, res) => res.render('homepage'))
+app.get('/', (req, res) => {
+      //res.sendFile(__dirname + '/views/newmain.html')
+    res.render('homepage')
+})
+
+
 
 /*
 app.get('/', (req, res) => {

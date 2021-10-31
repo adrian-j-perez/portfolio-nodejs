@@ -8,6 +8,9 @@ Description: This repo uses node, express middleware, and handlebars for a temp.
 This website is a project portfolio for Software Eng. and it is going to be hosted in Azure. 
 
 Credit:
+[based on this: https://codepen.io/albizan/pen/mMWdWZ](https://codepen.io/albizan/pen/mMWdWZ)
+
+[background image link](https://www.deviantart.com/thiojoejoe/art/Deconstruction-of-Shooting-Stars-889592888)
 
 Needed Files/systems:
 - node
