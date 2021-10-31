@@ -14,8 +14,8 @@ Credit:
 
 Needed Files/systems:
 - node
-- express
-- handlebars
+- npm installl express
+- npm install express-handlebars
 
 
 Link: https://adrianportfolio.azurewebsites.net/
