@@ -1,9 +1,3 @@
-/* 
-Name: Adrian Perez
-Descr: using node, express with handlebars, this is going to be hosted in azure 
-
-*/
-
 
 const express = require('express')
 const expressHandlebars = require('express-handlebars')
@@ -27,6 +21,31 @@ const port = process.env.PORT || 3000;
 app.get('/', (req, res) => {
       //res.sendFile(__dirname + '/views/newmain.html')
     res.render('homepage')
+})
+
+app.get('/projects', (req, res) => {
+    //res.sendFile(__dirname + '/views/newmain.html')
+  res.render('projects')
+})
+
+app.get('/about', (req, res) => {
+    //res.render('./public/projects/know-each-other/adrian-webpage')
+    res.sendFile(__dirname + '/public/projects/know-each-other/adrian-webpage.html')
+})
+
+app.get('/resume', (req, res) => {
+    res.render('resume')
+})
+
+
+
+app.get('/reg-exp-tester', (req, res) => {
+    //res.render('./public/projects/know-each-other/adrian-webpage')
+    res.sendFile(__dirname + '/public/projects/reg-exp-tester/regexp.html')
+})
+app.get('/know-each-other', (req, res) => {
+    //res.render('./public/projects/know-each-other/adrian-webpage')
+    res.sendFile(__dirname + '/public/projects/know-each-other/adrian-webpage.html')
 })
 
 
