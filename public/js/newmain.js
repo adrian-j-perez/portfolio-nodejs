@@ -1,11 +1,27 @@
-$('.navTrigger').click(function () {
-    $(this).toggleClass('active');
-    console.log("Clicked menu");
-    $("#mainListDiv").toggleClass("show_list");
-    $("#mainListDiv").fadeIn();
 
+// the fix https://stackoverflow.com/questions/18602331/why-is-this-jquery-click-function-not-working
+
+// https://www.w3schools.com/jquery/jquery_get_started.asp
+
+$(document).ready(function () {
+    $('.navTrigger').click(
+        function () {
+            $(this).toggleClass('active');
+            console.log("Clicked menu");
+            $("#mainListDiv").toggleClass("show_list");
+            $("#mainListDiv").fadeIn();
+        }
+    );
 });
 
-//need to fix this script
-// so whi is does the hanmder it slidle
+
+$(window).scroll(function () {
+    if ($(document).scrollTop() > 50) {
+        $('.nav').addClass('affix');
+        console.log("OK");
+    } else {
+        $('.nav').removeClass('affix');
+    }
+});
+
 
