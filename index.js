@@ -16,7 +16,7 @@ app.set("views", './views')
 const port = process.env.PORT || 3000;
 
 
-// webpage routes//
+// webpage routes // - should make a diffenr js file just for webroute for a clean look 
 
 app.get('/', (req, res) => {
       //res.sendFile(__dirname + '/views/newmain.html')
@@ -30,7 +30,8 @@ app.get('/projects', (req, res) => {
 
 app.get('/about', (req, res) => {
     //res.render('./public/projects/know-each-other/adrian-webpage')
-    res.sendFile(__dirname + '/public/projects/know-each-other/adrian-webpage.html')
+    // res.sendFile(__dirname + '/public/projects/know-each-other/adrian-webpage.html')
+    res.render("about")
 })
 
 app.get('/resume', (req, res) => {
