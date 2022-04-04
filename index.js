@@ -1,3 +1,5 @@
+// https://www.geeksforgeeks.org/handlebars-templating-in-expressjs/
+
 
 const express = require('express')
 const expressHandlebars = require('express-handlebars')
@@ -17,6 +19,7 @@ const port = process.env.PORT || 3000;
 
 
 // webpage routes // - should make a diffenr js file just for webroute for a clean look 
+
 
 app.get('/', (req, res) => {
       //res.sendFile(__dirname + '/views/newmain.html')
