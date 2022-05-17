@@ -1,20 +1,24 @@
 
 /* https://fonts.google.com/specimen/Montserrat */
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
 html,
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Montserrat", serif;
+    font-family: "Lato", serif;
     /* font-size: 62.5%; */
     font-size: 12px;
 }
 
+a { /* this handles the links*/
+    text-decoration: underline;
+}
+
 footer {
     text-align: center;
-    font-family: "Montserrat", serif;
+    font-family: "Lato", serif;
     font-size: 14px;
 
 }
@@ -84,7 +88,7 @@ footer {
 /* Home section */
 
 .home {
-    width: 100%;
+    width: 100%; /**/
     height: 69vh;
     background-image: url(/img/backgorund-winxp.jpg);
     background-position: center top;
@@ -105,6 +109,8 @@ footer {
 
 
 /* Media qurey section */
+
+/* i think this is where the conatint change depending on the screen size, i will have to canhge this later. */
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .container {
@@ -361,7 +367,7 @@ footer {
 	font-size: 4rem;
 }
 .myP {
-	text-align: justify;
+	/* text-align: justify; */
 	padding-left:15%;
 	padding-right:15%;
 	font-size: 20px;
