@@ -1,0 +1,29 @@
+input {
+    text-align: right;
+}
+
+/*making the button bigger*/
+button {
+    height: 75px;
+    width: 200px;
+    font-size: large;
+}
+
+h3 {
+    text-decoration-line: underline;
+}
+
+body {
+    padding: 50px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: beige;
+}
+
+.instrucations {
+    margin-top: 20px;
+    border-style: solid;
+    border: solid;
+    background-color: antiquewhite;
+
+}

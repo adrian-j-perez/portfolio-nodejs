@@ -1,18 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+
+/* https://fonts.google.com/specimen/Montserrat */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 html,
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Quicksand", sans-serif;
-    font-size: 62.5%;
-    font-size: 10px;
+    font-family: "Montserrat", serif;
+    /* font-size: 62.5%; */
+    font-size: 12px;
 }
 
 footer {
     text-align: center;
-    font-family: "Quicksand", sans-serif;
-    font-size: 10px;
+    font-family: "Montserrat", serif;
+    font-size: 14px;
 
 }
 /*-- Inspiration taken from abdo steif -->

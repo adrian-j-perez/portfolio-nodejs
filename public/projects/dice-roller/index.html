@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    Author: Adrian Perez
+    Class: Software Eng. 
+    Description: simple Dice Roller application.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dice Roller</title>
+    <link rel="stylesheet" href="/projects/dice-roller/index.css">
+    <script src="/projects/dice-roller/main.js"></script>
+</head>
+
+<body onload="rollDice()">
+
+    <h3>Two six sized dice:</h3>
+    <input id="dice1" type="text" value="" size="5" disabled>
+    <input id="dice2" type="text" value="" size="5" disabled>
+
+    <p id="total">Total: 0</p>
+    <br>
+    <!-- The autofocus is so the user can hit 'enter' to roll the dice-->
+    <button type="button" onclick="rollDice()" autofocus>Roll Dice</button>
+    <br>
+
+    <div class="instrucations">
+        <h3>Instrucations:</h3>
+        <p>Click the button that says &lsquo;Roll Dice&rsquo; to roll two dice at the same time, this can come in use when play a game of Monopoly</p>
+    </div>
+
+</body>
+
+</html>
