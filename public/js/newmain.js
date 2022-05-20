@@ -14,7 +14,6 @@ $(document).ready(function () {
     );
 });
 
-
 $(window).scroll(function () {
     if ($(document).scrollTop() > 50) {
         $('.nav').addClass('affix');
@@ -24,4 +23,11 @@ $(window).scroll(function () {
     }
 });
 
+function copyEmail() {
+
+    navigator.clipboard.writeText('adrianjperez@lewisu.edu');
+    alert('Emailed copied');
+
+    // put some code that will clpi borad my eila thign for hte icon i should make it more robust later 
+}
 
