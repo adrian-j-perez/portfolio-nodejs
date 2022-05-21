@@ -10,6 +10,8 @@ This project uses:
 - express
 - express-handlebars
 - nodemon (this is a dev dependencies )
+- jQuery
+- Material Design Icons
 
 To start the website enter `npm run startdev` to see the devlopment site on `localhost:3000`
 
