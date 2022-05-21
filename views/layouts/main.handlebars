@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
-    <script src="/js/newmain.js"></script>
-    <link rel="stylesheet" href="/css/newmain.css">
-    
+    {{!-- <link rel="icon" href="http://example.com/favicon.png">  this is to change the ion in the tab--}}
+
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+
 </head>
+
 <body>
     <nav class="nav">
         <div class="container">
+
             <div class="logo">
                 <a href="/">Home</a>
             </div>
@@ -28,6 +33,7 @@
                 <i></i>
                 <i></i>
             </span>
+
         </div>
     </nav>
 
@@ -38,25 +44,12 @@
         {{{body}}}
 
     </div>
-    
 
-    <!-- Jquery needed -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <footer>
+        <p> Updated 2022</p>
 
-    <!-- Function used to shrink nav bar removing paddings and adding black background -->
-    <script>
-        $(window).scroll(function () {
-            if ($(document).scrollTop() > 50) {
-                $('.nav').addClass('affix');
-                console.log("OK");
-            } else {
-                $('.nav').removeClass('affix');
-            }
-        });
-    </script>
-
-
-
+    </footer>
 
 </body>
+
 </html>

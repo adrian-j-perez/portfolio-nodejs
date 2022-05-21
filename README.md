@@ -1,4 +1,5 @@
 # portfolio-nodejs - Main
+
 ## About
 
 This is my portfolio website that is using node.js, express middleware, and handlebars as a tempelate for html. The website is hosted on Azure  
@@ -11,7 +12,6 @@ This project uses:
 - express-handlebars
 - jQuery
 - Material Design Icons
-
 
 Link: https://adrianportfolio.azurewebsites.net/
 

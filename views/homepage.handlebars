@@ -1,3 +1,61 @@
-<h1>Welcome To My Home Page</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
 
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit eius cumque dolores quis culpa nihil incidunt fuga, perferendis adipisci debitis, animi a perspiciatis necessitatibus, error id similique officia aspernatur quos!</p>
+    <script>
+        var i = 0;
+        var txt = 'Home Page'; 
+        var speed = 60; /* The speed/duration of the effect in milliseconds */
+        function typeWriterHome() {
+
+            if (i < txt.length) {
+                document.getElementById("homeWriter").innerHTML += txt.charAt(i);
+                i++;
+                window.setTimeout(typeWriterHome, speed);
+            }
+        }
+        window.onload = typeWriterHome;
+
+    </script>
+</head>
+
+
+<h1 id="homeWriter" onLoad="typeWriterHome();"></h1>
+{{!-- Welcome To My Home Page --}}
+
+<p>
+    Hello, this is my website that I built by hand, the purpose of this website is to host a portfolio of myself that has some projects that I have done and my resume. As you can see, there are tabs that you can click on the top right to learn more.
+</p>
+
+<p>
+    How was this website made you might ask, well besides that common three HTML, CSS, and JavaScript this website also uses web technologies node.js, express.js, and express-handlebars. Node.js runs the website like a server, express.js is a middleware that helps with server control like dealing with web routes, and handlebars is a templating language that is used to generate HTML for the webpage. To learn more about how the website was made or to see the source code here is the <a href="https://github.com/7pereza/portfolio-nodejs" target="_blank">GitHub link</a> to the repository.
+</p>
+
+<p>
+    Down below are my public profiles feel free to take a look.
+</p>
+
+<br>
+
+<center>
+
+    <table>
+        <tr>
+            <td>
+                <a href="https://github.com/7pereza" target="_blank"><img src="/img/Octicons-mark-github.svg"
+                        title="GItHub" alt="Github homepage link" width="48" height="48" border="0" /> </a>
+            </td>
+
+            <td>
+                <a href="https://www.linkedin.com/in/adrian-perez-9253241a4/" target="_blank"><img
+                        src="/img/LinkedIn_logo_initials.png" title="Linkedin" alt="Linkedin homepage link" width="48"
+                        height="48" border="0" /> </a>
+            </td>
+
+            <td></td>
+        </tr>
+
+    </table>
+
+</center>
