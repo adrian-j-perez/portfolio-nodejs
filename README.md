@@ -1,4 +1,5 @@
-# Portfolio-nodejs - Development 
+# portfolio-nodejs - Main
+
 ## About
 
 This is my portfolio website that is using node.js, express middleware, and handlebars as a tempelate for html. The website is hosted on Azure  
@@ -9,13 +10,11 @@ This project uses:
 - node.js
 - express
 - express-handlebars
-- nodemon (this is a dev dependencies )
 - jQuery
 - Material Design Icons
 
-To start the website enter `npm run startdev` to see the devlopment site on `localhost:3000`
-
 Link: https://adrianportfolio.azurewebsites.net/
+
 ## Credits
 
 [Layout nav bar based on this: https://codepen.io/albizan/pen/mMWdWZ](https://codepen.io/albizan/pen/mMWdWZ)
@@ -28,4 +27,3 @@ Name: Adrian Perez
 Email: adrianjperez@lewisu.edu
 
 Other Email: perez324158@gmail.com
-
