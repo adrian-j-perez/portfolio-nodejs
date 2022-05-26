@@ -2,6 +2,8 @@
 /* https://fonts.google.com/specimen/Montserrat */
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
+/* TODO Fix me look at differnet whne the screen size change and soing some abut the backgorund image */
+
 html,
 body {
     margin: 0;
