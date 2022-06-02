@@ -33,7 +33,7 @@ footer {
     width: 100%;
     height: 65px;
     position: fixed;
-    line-height: 65px;
+    line-height: 55px; /* to fix the gap bewteen nav nar and list*/
     text-align: center;
 }
 
@@ -90,10 +90,10 @@ footer {
 /* Home section */
 
 .home {
-    width: 100%; /**/
+    width: auto; /**/
     height: 69vh;
     background-image: url(/img/backgorund-winxp.jpg);
-    background-position: center top;
+    background-position: center;
 	background-size: cover ;
     
 }
@@ -125,7 +125,7 @@ footer {
         display: block;
     }
     .nav div.logo {
-        margin-left: 15px;
+        margin-left: 5px;
     }
     .nav div.main_list {
         width: 100%;
