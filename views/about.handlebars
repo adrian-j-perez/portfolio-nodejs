@@ -2,34 +2,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>About</title>
-    
-    {{!-- i might move the css into the main html file --}}
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
     {{!-- https://fontawesome.com/v4/ us this one instead ?? --}}
-    
+
+    {{!-- css and js for the button  https://www.w3schools.com/howto/howto_js_copy_clipboard.asp --}}
+    <style>
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 140px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 150%;
+            left: 50%;
+            margin-left: -75px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+
+    <script>
+
+        function copyEmail() {
+            navigator.clipboard.writeText('adrianjperez@lewisu.edu');
+            //alert('Emailed copied');
+            var tooltip = document.getElementById("myTooltip");
+            tooltip.innerHTML = "Email copied !";
+        
+        }
+
+        function outFunc() {
+            var tooltip = document.getElementById("myTooltip");
+            tooltip.innerHTML = "Copy to clipboard";
+        }
+    </script>
+
 </head>
 
 <h1>About</h1>
 
 <div style="text-align: center;">
 
-    <h2>Adrian Perez</h2>      
+    <h2>Adrian Perez</h2>
 
     <img class="centerimg" alt="Adrian's headshot image" src="/img/image-adrian.jpg" width="35%" height="35%" title="Headshot">
 
-{{!-- https://www.w3schools.com/howto/howto_js_copy_clipboard.asp to better show that copting thing  --}}
-    <p>
-        <a href="mailto:adrianjperez@lewisu.edu">Email: adrianjperez@lewisu.edu</a>
-        <span class="mdi mdi-content-copy" title="Copy" onclick="copyEmail()"></span>
-    </p>
-    
+    <div>
+        <a href="mailto:adrianjperez@lewisu.edu">adrianjperez@lewisu.edu</a>
+
+        <div class="tooltip">
+            <span class="mdi mdi-content-copy" onclick="copyEmail()" onmouseout="outFunc()" >
+                <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                
+            </span>
+
+        </div>
+
+    </div>
+
 </div>
+
 
 <h2>Introduction</h2>
 
 <p>
-   Hello person welcome to my website as you saw up top my name is Adrian and I recently graduated in May 2022 at Lewis University. I did school full time for four years in a row, where I also work during the weekends at Dunkin Donuts. So, most I spent most of my time doing homework, learning something new, or just working. My family lives in Joliet, which is about a 15 to 20 min drive from Lewis depending on the traffic. I am the oldest sibling in my family, including me there are four of us. I majored in Computer Science with a focus on Software Engineering, along with a minor in Mathematics.
+    Hello person welcome to my website as you saw up top my name is Adrian and I recently graduated in May 2022 at Lewis
+    University. I did school full time for four years in a row, where I also work during the weekends at Dunkin Donuts.
+    So, most I spent most of my time doing homework, learning something new, or just working. My family lives in Joliet,
+    which is about a 15 to 20 min drive from Lewis depending on the traffic. I am the oldest sibling in my family,
+    including me there are four of us. I majored in Computer Science with a focus on Software Engineering, along with a
+    minor in Mathematics.
 
 <h3>What I Hope to Learn </h3>
 <ul style="list-style-type: square;">
@@ -40,7 +108,12 @@
 
 <h3>My Favorite Hobby</h3>
 <p>
-    When I have time for my hobbies, my favorite one is watching tv or some kind of videos like going on YouTube there is something about this that I find relaxing. This hobby is quite simple compared to some of my other hobbies, all I have to do is just lay on the couch and turn on the tv, but this hobby can get old pretty fast if there is not anything interesting to watch. So, some other hobbies of mine are playing some video games with my mates, going through social media (looking at memes), practicing the trumpet, and messing around with computers. These are some of my current hobbies that I like to do when I find myself with free time.
+    When I have time for my hobbies, my favorite one is watching tv or some kind of videos like going on YouTube there
+    is something about this that I find relaxing. This hobby is quite simple compared to some of my other hobbies, all I
+    have to do is just lay on the couch and turn on the tv, but this hobby can get old pretty fast if there is not
+    anything interesting to watch. So, some other hobbies of mine are playing some video games with my mates, going
+    through social media (looking at memes), practicing the trumpet, and messing around with computers. These are some
+    of my current hobbies that I like to do when I find myself with free time.
 </p>
 
 <h3>Greatest Innovation</h3>
@@ -51,7 +124,8 @@
     <li>Linux - There seem to many uses for this OS and it's still relevant <a
             href="https://www.britannica.com/technology/Linux" target="_blank">Link</a> </li>
 
-    <li>Intel - The company that lead the way for CPUs <a href="https://www.siliconvalleyhistorical.org/intel-history" target="_blank">Link</a></li>
+    <li>Intel - The company that lead the way for CPUs <a href="https://www.siliconvalleyhistorical.org/intel-history"
+            target="_blank">Link</a></li>
 
 </ul>
 

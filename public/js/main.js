@@ -7,7 +7,7 @@ $(document).ready(function () {
     $('.navTrigger').click(
         function () {
             $(this).toggleClass('active');
-            console.log("Clicked menu");
+            // console.log("Clicked menu"); // to test menu
             $("#mainListDiv").toggleClass("show_list");
             $("#mainListDiv").fadeIn();
         }
@@ -17,17 +17,9 @@ $(document).ready(function () {
 $(window).scroll(function () {
     if ($(document).scrollTop() > 50) {
         $('.nav').addClass('affix');
-        console.log("OK");
+        // console.log("OK"); //debugging
     } else {
         $('.nav').removeClass('affix');
     }
 });
-
-function copyEmail() {
-
-    navigator.clipboard.writeText('adrianjperez@lewisu.edu');
-    alert('Emailed copied');
-
-    // put some code that will clpi borad my eila thign for hte icon i should make it more robust later 
-}
 
