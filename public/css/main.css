@@ -159,6 +159,13 @@ footer {
     .nav div.media_button {
         display: block;
     }
+
+    .home {
+        /*I added this so phone screen  has more space*/
+        height: 50vh;       
+    }
+
+
 }
 
 /* Animation */
@@ -374,4 +381,6 @@ footer {
 	.myP {
 		padding:2%;
 	}
+
+  
 }
